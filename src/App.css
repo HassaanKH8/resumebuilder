@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homepage {
+  height: 100vh;
+  width: 100%;
+  background-color: #efeee9;
+  overflow-y: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #36454f;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  font-family: "EB Garamond";
+  font-size: 36px;
+  font-weight: 500;
+  color: #efeee9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottomSection {
+  height: calc(100vh-80px);
+}
+
+.personalinfoheading {
+  font-family: "EB Garamond";
+  font-size: 36px;
+  font-weight: 500;
+  color: #36454f;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contactinfoheading {
+  font-family: "EB Garamond";
+  font-size: 30px;
+  font-weight: 500;
+  color: #36454f;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.entrylabel {
+  font-family: "EB Garamond";
+  font-size: 18px;
+  font-weight: 500;
+  color: #36454f;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.weentrylabel {
+  font-family: "EB Garamond";
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #36454f;
+  align-self: flex-start;
+}
+
+.entryinput {
+  font-size: 18px;
+  font-family: "EB Garamond";
+  padding: 10px 16px;
+  background-color: #36454f;
+  color: #efeee9;
+  border: none;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.entryinput::placeholder {
+  color: #a9a9a9;
+}
+
+.edentryinput {
+  font-size: 16px;
+  font-family: "EB Garamond";
+  padding: 10px;
+  background-color: #36454f;
+  color: #efeee9;
+  border: none;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.edentryinput::placeholder {
+  color: #a9a9a9;
+}
+
+.edentry {
+  font-family: "EB Garamond";
+  font-size: 24px;
+  font-weight: 600;
+  color: #36454f;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.edform {
+  margin-bottom: 10px;
+}
+
+.remove-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #36454f;
+  color: #efeee9;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.remove-btn:hover {
+  background-color: #cfcdc6;
+  color: #36454f;
+}
+
+
+.add-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #36454f;
+  color: #efeee9;
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.add-btn:hover {
+  background-color: #cfcdc6;
+  color: #36454f;
+}
+
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #36454f;
+  color: #efeee9;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.submit-btn:hover {
+  background-color: #cfcdc6;
+  color: #36454f;
+}
+
+.submit-btn2 {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #36454f;
+  color: #efeee9;
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.submit-btn2:hover {
+  background-color: #cfcdc6;
+  color: #36454f;
+}
+
+.skill-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.add-skill-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #36454f;
+  color: #efeee9;
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.add-skill-btn:hover {
+  background-color: #cfcdc6;
+  color: #36454f;
+}
+
+.entryinput2 {
+  font-size: 18px;
+  font-family: "EB Garamond";
+  padding: 10px 16px;
+  background-color: #36454f;
+  color: #efeee9;
+  border: none;
+  border-radius: 16px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.entryinput2::placeholder {
+  color: #a9a9a9;
 }

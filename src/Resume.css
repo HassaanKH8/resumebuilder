@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.resumePage {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 210 / 297;
+}
+
+.resumeHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.headerInfo {
+  margin-bottom: 15px;
+}
+
+.fullName {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.contactInfo {
+  font-size: 1rem;
+  color: #868e96;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.contentColumn {
+  flex: 1;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #343a40;
+  font-weight: 600;
+  border-bottom: 2px solid #36454f;
+  padding-bottom: 5px;
+}
+
+.educationItem, .experienceItem {
+  margin-bottom: 20px;
+}
+
+.institution2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #36454f;
+}
+
+.institution, .jobTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.companyName {
+  font-size: 1.1rem;
+  color: #36454f;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.workDates, .educationItem {
+  font-size: 1rem;
+  color: #9e9e9e;
+}
+
+.skillsList {
+  list-style: none;
+  padding: 0;
+}
+
+.skillsList li {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  background-color: #36454f;
+  color: white;
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.printButton {
+  background-color: #36454f;
+  color: #efeee9;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.printButton:hover {
+  background-color: #273036;
+}
