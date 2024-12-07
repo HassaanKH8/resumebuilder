@@ -4,6 +4,7 @@ import EducationForm from "./EducationForm";
 import WorkExperienceForm from "./WorkExperienceForm";
 import SkillsForm from "./SkillsForm";
 import ResumePage from "./ResumePage";
+import CustomImage from "./CustomImage";
 
 const HomeScreen = () => {
 
@@ -14,6 +15,7 @@ const HomeScreen = () => {
   const [edInfoCompleted, setEdInfoCompleted] = useState(false);
   const [WESubmitted, setWESubmitted] = useState(false);
   const [skillsSubmitted, setSkillsSubmitted] = useState(false);
+  const [imageSubmitted, setimageSubmitted] = useState(false);
 
   const [personalInfo, setPersonalInfo] = useState({
     fullname: "",
@@ -31,7 +33,7 @@ const HomeScreen = () => {
       graduationYear: "",
     },
   ]);
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState([""]);
 
   const [WExperienceList, setWExperienceList] = useState([
     {
@@ -43,6 +45,8 @@ const HomeScreen = () => {
       isCurrent: false,
     },
   ]);
+
+  const [avatarImage, setAvatarImage] = useState()
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
@@ -90,22 +94,30 @@ const HomeScreen = () => {
                 {WESubmitted ? (
                   <div>
                     {skillsSubmitted ? (
-                      <ResumePage
-                        personalInfo={personalInfo}
-                        educationInfo={edList}
-                        workExperience={WExperienceList}
-                        skills={skills}
-                      />
+                      <div>
+                        {imageSubmitted ? (
+                          <ResumePage
+                          setimageSubmitted={setimageSubmitted}
+                          avatarImage={avatarImage}
+                          personalInfo={personalInfo}
+                          educationInfo={edList}
+                          workExperience={WExperienceList}
+                          skills={skills}
+                        />
+                        ):(
+                          <CustomImage setimageSubmitted={setimageSubmitted} setSkillsSubmitted={setSkillsSubmitted} setAvatarImage={setAvatarImage} avatarImage={avatarImage} />
+                        )}
+                      </div>
                     ) : (
-                      <SkillsForm setSubmited={setSkillsSubmitted} setSubmittedSkills={setSkills} submittedSkills={skills} />
+                      <SkillsForm setSubmited={setSkillsSubmitted} setSubmittedSkills={setSkills} submittedSkills={skills} setWESubmitted={setWESubmitted} />
                     )}
                   </div>
                 ) : (
-                  <WorkExperienceForm setWEDone={setWESubmitted} workExperienceList={WExperienceList} setWorkExperienceList={setWExperienceList} />
+                  <WorkExperienceForm setWEDone={setWESubmitted} workExperienceList={WExperienceList} setWorkExperienceList={setWExperienceList} setEdInfoCompleted={setEdInfoCompleted} />
                 )}
               </div>
             ) : (
-              <EducationForm setEdusaved={setEdInfoCompleted} educationList={edList} setEducationList={setEdList} />
+              <EducationForm setEdusaved={setEdInfoCompleted} educationList={edList} setEducationList={setEdList} setPersonalInfoCompleted={setPersonalInfoCompleted} />
             )}
           </div>
         ) : (

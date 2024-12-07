@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const EducationForm = ({ setEdusaved, educationList, setEducationList }) => {
+const EducationForm = ({ setEdusaved, educationList, setEducationList, setPersonalInfoCompleted }) => {
   const [wantToAddE, setWantToAddE] = useState(false);
 
   const handleChange = (index, field, value) => {
@@ -47,7 +47,10 @@ const EducationForm = ({ setEdusaved, educationList, setEducationList }) => {
 
   return (
     <div>
-      <h1 className="personalinfoheading">Education Info</h1>
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+        <img alt='backarrow' src={require("../assets/arrow.png")} style={{ height: 22, width: 22, marginRight: 20, marginTop: 20, cursor: 'pointer' }} onClick={() => { setPersonalInfoCompleted(false) }} />
+        <h1 className='personalinfoheading'>Education Info</h1>
+      </div>
       <div
         style={{
           display: "flex",

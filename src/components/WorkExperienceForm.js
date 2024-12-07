@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const WorkExperienceForm = ({ setWEDone, workExperienceList, setWorkExperienceList }) => {
+const WorkExperienceForm = ({ setWEDone, workExperienceList, setWorkExperienceList, setEdInfoCompleted }) => {
   const [wantToAddWE, setWantToAddWE] = useState(false);
 
   const handleChange = (index, field, value) => {
@@ -40,14 +40,17 @@ const WorkExperienceForm = ({ setWEDone, workExperienceList, setWorkExperienceLi
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(workExperienceList); // Log updated work experience list
+    console.log(workExperienceList);
     setWorkExperienceList(workExperienceList);
     setWEDone(true);
   };
 
   return (
     <div className="workExperienceForm">
-      <h1 className="personalinfoheading">Work Experience Info</h1>
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+        <img alt='backarrow' src={require("../assets/arrow.png")} style={{ height: 22, width: 22, marginRight: 20, marginTop: 20, cursor: 'pointer' }} onClick={() => { setEdInfoCompleted(false) }} />
+        <h1 className="personalinfoheading">Work Experience Info</h1>
+      </div>
       <div
         style={{
           display: "flex",

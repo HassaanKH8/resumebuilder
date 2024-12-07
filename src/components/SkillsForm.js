@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const SkillsForm = ({ setSubmited, submittedSkills, setSubmittedSkills }) => {
-    const [skills, setSkills] = useState([""]);
+const SkillsForm = ({ setSubmited, submittedSkills, setSubmittedSkills, setWESubmitted }) => {
+    const [skills, setSkills] = useState(submittedSkills || [""]);
 
     const handleSkillChange = (index, value) => {
         const updatedSkills = [...skills];
@@ -27,7 +27,10 @@ const SkillsForm = ({ setSubmited, submittedSkills, setSubmittedSkills }) => {
 
     return (
         <div className="skillsForm">
-            <h1 className="personalinfoheading">Add Your Skills</h1>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                <img alt='backarrow' src={require("../assets/arrow.png")} style={{ height: 22, width: 22, marginRight: 20, marginTop: 20, cursor: 'pointer' }} onClick={() => { setWESubmitted(false) }} />
+                <h1 className="personalinfoheading">Add Your Skills</h1>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 10 }}>
                     {skills.map((skill, index) => (

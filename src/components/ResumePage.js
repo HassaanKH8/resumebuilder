@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Resume.css";
 import jsPDF from "jspdf";
 import html2canvas from 'html2canvas';
 
-const ResumePage = ({ personalInfo, educationInfo, workExperience, skills }) => {
+const ResumePage = ({ personalInfo, educationInfo, workExperience, skills, avatarImage, setimageSubmitted }) => {
+
+    const [template, setTemplate] = useState(1);
 
     const handleDownload = () => {
         const input = document.getElementById('resumeContent');
@@ -19,16 +21,28 @@ const ResumePage = ({ personalInfo, educationInfo, workExperience, skills }) => 
             pdf.addImage(imgData, 'PNG', 0, 0, pageWidth, pageHeight);
             pdf.save(`${personalInfo.fullname}.pdf`);
         });
-
     };
 
     return (
         <div className="container">
-            <button onClick={handleDownload} className="printButton">
-                Download Resume
-            </button>
-            <div id="resumeContent" className="resumePage">
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                <img alt='backarrow' src={require("../assets/arrow.png")} style={{ height: 22, width: 22, marginRight: 20, cursor: 'pointer' }} onClick={() => { setimageSubmitted(false) }} />
+                <button onClick={handleDownload} className="printButton">
+                    Download Resume
+                </button>
+            </div>
+
+            <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                <select onChange={(e) => setTemplate(Number(e.target.value))} value={template}>
+                    <option value={1}>Template 1 (Classic)</option>
+                    <option value={2}>Template 2 (Modern)</option>
+                    <option value={3}>Template 3 (Sleek)</option>
+                </select>
+            </div>
+
+            <div id="resumeContent" className={`resumePage template-${template}`}>
                 <header className="resumeHeader">
+                    <img src={URL.createObjectURL(avatarImage)} style={{height: 100, width: 100, objectFit: 'contain', borderRadius: '50%', marginBottom: 10}}/>
                     <div className="headerInfo">
                         <h1 className="fullName">{personalInfo.fullname}</h1>
                         <p className="contactInfo">

@@ -230,3 +230,14 @@
 .entryinput2::placeholder {
   color: #a9a9a9;
 }
+
+.imageinput::-webkit-file-upload-button {
+  background-color: #36454f;
+  border-radius: 10px;
+  padding: 10px;
+  color: #efeee9;
+  font-family: "Inter";
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+}

@@ -31,24 +31,187 @@ body {
   aspect-ratio: 210 / 297;
 }
 
-.resumeHeader {
+.template-1 .resumeHeader {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.headerInfo {
+.template-1 .headerInfo {
   margin-bottom: 15px;
 }
 
-.fullName {
+.template-1 .fullName {
   font-size: 3rem;
   font-weight: bold;
   color: #343a40;
 }
 
-.contactInfo {
+.template-1 .contactInfo {
   font-size: 1rem;
   color: #868e96;
+}
+
+.template-2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.template-2 .resumeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  justify-self: center;
+  margin-bottom: 30px;
+}
+
+.template-2 .resumeHeader img {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.template-2 .headerInfo {
+  text-align: left;
+}
+
+.template-2 .fullName {
+  font-size: 2.5rem;
+  color: #1d2d44;
+}
+
+.template-2 .contactInfo {
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+.template-3 .resumeHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.template-3 .resumeHeader img {
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  margin-bottom: 20px;
+  border: 3px solid #3498db;
+}
+
+.template-3 .headerInfo {
+  margin-top: 15px;
+}
+
+.template-3 .fullName {
+  font-size: 2.8rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.template-3 .contactInfo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.template-3 .contactInfo span {
+  margin-right: 20px;
+}
+
+.template-3 .mainContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.template-3 .contentColumn {
+  flex: 1;
+  padding: 20px;
+}
+
+.template-3 h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #36454f;
+  position: relative;
+  padding-left: 20px;
+}
+
+.template-3 h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 100%;
+  background-color: #36454f;
+}
+
+.template-3 .educationItem,
+.template-3 .experienceItem {
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.template-3 .institution, 
+.template-3 .jobTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.template-3 .institution2,
+.template-3 .companyName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.template-3 .workDates,
+.template-3 .educationItem {
+  font-size: 1rem;
+  color: #7d7d7d;
+  margin-top: 5px;
+}
+
+.template-3 .skillsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.template-3 .skillsList li {
+  font-size: 1.1rem;
+  background-color: #36454f;
+  color: white;
+  padding: 8px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+.template-3 .printButton {
+  background-color: #36454f;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.template-3 .printButton:hover {
+  background-color: #36454f;
 }
 
 .mainContent {
@@ -131,9 +294,6 @@ h2 {
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .printButton:hover {
