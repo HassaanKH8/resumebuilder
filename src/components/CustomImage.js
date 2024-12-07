@@ -29,7 +29,7 @@ const CustomImage = ({ setimageSubmitted, setSkillsSubmitted, avatarImage, setAv
                         className="imageinput"
                         type="file"
                         accept="image/*"
-                        filename={selectedImage}
+                        required
                         onChange={handleImageChange}
                     />
                     <button className="submit-btn" type="submit" style={{ marginTop: 30 }}>Submit</button>
